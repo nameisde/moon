@@ -14,5 +14,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'fahfudinfarhan.me',
   integrations: [tailwind(), alpinejs(), mdx(), sitemap()]
 });
