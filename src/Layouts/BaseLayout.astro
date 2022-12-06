@@ -1,0 +1,29 @@
+---
+import BaseHead from "../Components/BaseHead.astro";
+import Footer from "../Components/Footer.astro";
+import Navbar from "../Components/Navbar.astro";
+
+export interface Props {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+}
+const { title, description, pubDate, updatedDate } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title={title} description={description} />
+    </head>
+    <body class="bg-moon">
+        <Navbar />
+        <main>
+            <article>
+                <slot name="article" />
+            </article>
+        </main>
+        <slot name="optional" />
+        <Footer />
+    </body>
+</html>
