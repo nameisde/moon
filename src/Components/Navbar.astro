@@ -1,0 +1,32 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<nav>
+    <div class="navigation">
+        <div
+            class="flex flex-row justify-between items-center relative max-w-4xl mx-auto py-6 px-2"
+        >
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="/logo.png" alt="logo" width="40" height="40" />
+                </a>
+            </div>
+            <div class="nav-menu">
+                <div
+                    class="flex flex-row outline outline-1 outline-moon-outline-default gap-8 rounded-full px-3 py-3 bg-moon-default"
+                >
+                    <a class="text-moon-text-default hover:text-moon-text-hover ml-4" href="/">Home</a>
+                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/blog">Blog</a>
+                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/books">Books</a>
+                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/tools">Tools</a>
+                    <a class="text-moon-text-default hover:text-moon-text-hover mr-4" href="/projects">Projects</a>
+                </div>
+            </div>
+            <div class="nav-toggle">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</nav>
