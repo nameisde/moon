@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../Layouts/BaseLayout.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import Navbar from "../Components/Navbar.astro";
+
+const SITE_TITLE = '';
+const SITE_DESCRIPTION = '';
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<div slot="article" class="article">
-		
-	</div>
+    <Navbar />
 </BaseLayout>
