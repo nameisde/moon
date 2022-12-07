@@ -1,31 +1,85 @@
 ---
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
 ---
 
 <nav>
     <div class="navigation">
         <div
-            class="flex flex-row justify-between items-center relative max-w-4xl mx-auto py-6 px-2"
+            class="flex flex-row justify-between items-center content-center relative max-w-4xl mx-auto sm:px-6 py-6 px-2"
         >
             <div class="nav-logo">
                 <a href="/">
                     <img src="/logo.png" alt="logo" width="40" height="40" />
                 </a>
             </div>
-            <div class="nav-menu">
+            <div class="nav-menu hidden md:flex">
                 <div
-                    class="flex flex-row outline outline-1 outline-moon-outline-default gap-8 rounded-full px-3 py-3 bg-moon-default"
+                    class="flex flex-row outline outline-1 gap-8 rounded-full px-3 py-3 outline-moon-outline-default  bg-moon-default"
                 >
-                    <a class="text-moon-text-default hover:text-moon-text-hover ml-4" href="/">Home</a>
-                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/blog">Blog</a>
-                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/books">Books</a>
-                    <a class="text-moon-text-default hover:text-moon-text-hover " href="/tools">Tools</a>
-                    <a class="text-moon-text-default hover:text-moon-text-hover mr-4" href="/projects">Projects</a>
+                    <a
+                        class="text-moon-text-default hover:text-moon-text-hover ml-4"
+                        href="/">Home</a
+                    >
+                    <a
+                        class="text-moon-text-default hover:text-moon-text-hover"
+                        href="/blog">Blog</a
+                    >
+                    <a
+                        class="text-moon-text-default hover:text-moon-text-hover"
+                        href="/books">Books</a
+                    >
+                    <a
+                        class="text-moon-text-default hover:text-moon-text-hover"
+                        href="/tools">Tools</a
+                    >
+                    <a
+                        class="text-moon-text-default hover:text-moon-text-hover mr-4"
+                        href="/projects">Projects</a
+                    >
                 </div>
             </div>
-            <div class="nav-toggle">
-                <p></p>
+            <div class="hidden md:flex">
+                <a href="/" class="Twitter">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 24 24"
+                        ><rect
+                            x="0"
+                            y="0"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            stroke="none"></rect><path
+                            fill="white"
+                            d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex md:hidden rounded-full gap-2 px-4 py-3 items-center outline outline-1 outline-moon-outline-default bg-moon-default">
+                <p class="text-moon-text-default hover:text-moon-text-hover">Menu</p>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                    ><rect
+                        x="0"
+                        y="0"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        stroke="none"></rect><path
+                        fill="none"
+                        stroke="white"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"></path>
+                </svg>
             </div>
         </div>
     </div>
